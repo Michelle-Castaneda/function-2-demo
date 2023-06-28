@@ -167,9 +167,9 @@ console.log(dogProducts)
 function makeSandwich(bread) {
   //returns as a function
   return function(ingredients){//ingredientes need to be an array in order for the function to loop over it 
-    let order = `you ordered a ${bread} sandwich with`
+    let order = `you ordered a ${bread} sandwich with`;
     for(let i = 0; i < ingredients.length;i++) {
-      if (i=== ingredients.length - 1 && i !== 0) //more than one ingredient or if we rech the last ingredient
+      if (i=== ingredients.length - 1 && i !== 0){ //more than one ingredient or if we rech the last ingredient
       order += `and ${ingredients[i]}`;
       } else if (ingredients.length ===1) { //only one ingredient
       order += `${ingredients[i]}.`;
@@ -180,7 +180,7 @@ function makeSandwich(bread) {
     return order;
   }
 }
-
-const makeRyeSanwich = ('rye');
-console.log(makeRyeSanwich(['pickles', 'cheese', 'turkey', 'mayo']));
+}
+const makeRyeSandwich = makeSandwich('rye');
+console.log(makeRyeSandwich(['pickles', 'cheese', 'turkey', 'mayo']));
 
